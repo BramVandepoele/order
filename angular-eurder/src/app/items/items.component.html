@@ -1,0 +1,26 @@
+<div class="mainContainer">
+    <div class="componentHeader">
+        <h1>Items</h1>
+        <input placeholder="search...">
+    </div>
+    <ul>
+        <li class="item" *ngFor="let item of items">
+            <a routerLink="/item-detail/{{item.id}}">
+                <div class="itemContainer">
+                    {{item.name}}
+                    <img src="https://picsum.photos/170">
+                    {{item.price}}
+                    {{item.stockUrgency}}
+                </div>
+            </a>
+        </li>
+        <li id="createItem">
+            <a href="/create-item">
+                <p>add new item</p>
+                <div>
+                    <div id="createItemPlaceholder"><h3>+</h3></div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

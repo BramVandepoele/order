@@ -1,0 +1,54 @@
+form{
+    margin: auto;
+    width: 60%;
+}
+form input, form textarea{
+    width: 100%;
+    margin-bottom: 20px;
+}
+form label{
+    float: left;
+}
+
+#description{
+    height: 200px;
+}
+
+.smallInput{
+    width: 150px;
+    float: left;
+    margin-right: 25px;
+}
+
+#buttonContainer{
+    clear: both;
+    text-align: left;
+}
+
+#buttonContainer button{
+    height: 40px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+}
+
+#buttonCreate{
+    width: 70%;
+    background-color: #0063B3;
+}
+
+#buttonCreate:hover, #buttonCreate:active{
+    background-color: #0583F2;
+}
+
+#buttonCancel:hover, #buttonCancel:active{
+    background-color: lightgray;
+}
+#buttonCancel{
+    width: 25%;
+    float: right;
+    background-color: darkgrey;
+}

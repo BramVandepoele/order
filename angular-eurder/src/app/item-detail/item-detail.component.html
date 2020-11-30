@@ -1,0 +1,26 @@
+<div *ngIf="item" class="mainContainer">
+    <div class="componentHeader">
+        <h1>Item <span id="id">{{item.id}}</span></h1>
+        <button (click)="goBack()">Back</button>
+    </div>
+    <div class="form">
+        <label for="name">Name</label>
+            <input id="name" [(ngModel)]="item.name" placeholder="Item name"/>
+
+        <label for="description">Description</label>
+            <textarea id="description" [(ngModel)]="item.description" placeholder="Item description"></textarea>
+        <div class="smallInput">
+        <label for="price">Price</label>
+            <input id="price" [(ngModel)]="item.price" placeholder="Price"/>
+        </div>
+        <div class="smallInput">
+        <label for="stock">Amount of Stock</label>
+            <input id="stock" [(ngModel)]="item.amountOfStock" placeholder="Amount"/>
+        </div>
+        <div id="buttonContainer">
+        <button id="buttonSave">Save</button>
+        <button id="buttonCancel">Cancel</button>
+        </div>
+    </div>
+
+</div>

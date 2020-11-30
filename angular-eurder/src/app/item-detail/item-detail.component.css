@@ -1,0 +1,65 @@
+.componentHeader{
+    display: flex;
+    justify-content: space-between;
+}
+#id{
+    font-size: 0.7em;
+}
+
+button{
+    margin-top: 10px;
+    margin-right: 20px;
+    height: 30px;
+    width: 100px;
+    background-color: #0063B3;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: white;
+}
+
+.form{
+    margin: auto;
+    width: 60%;
+}
+.form input, .form textarea{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.form label {
+    float: left;
+}
+
+#description{
+    height: 200px;
+}
+
+.smallInput{
+    width: 150px;
+    float: left;
+    margin-right: 25px;
+}
+
+#buttonSave{
+    width: 70%;
+    background-color: #0063B3;
+    height: 40px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+#buttonSave:hover, #buttonSave:active{
+    background-color: #0583F2;
+}
+
+#buttonCancel:hover, #buttonCancel:active{
+    background-color: lightgray;
+}
+#buttonCancel{
+    width: 25%;
+    float: right;
+    background-color: darkgrey;
+    height: 40px;
+    border-radius: 12px;
+}

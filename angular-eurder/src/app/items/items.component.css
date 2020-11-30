@@ -1,0 +1,76 @@
+.componentHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.componentHeader input{
+    height: 30px;
+    margin-right: 25px;
+    margin-top: 10px;
+    width: 300px;
+    border-radius: 10px;
+    border-color: #0063B3;
+}
+
+li a:active, li a:hover{
+    color: #0063B3;
+}
+
+ul{
+    align-self: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+}
+li{
+    margin: 30px;
+    width: 190px;
+    vertical-align: bottom;
+    text-align: center;
+}
+.itemContainer{
+    display: flex;
+    flex-direction: column;
+}
+.itemContainer img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    border-radius: 20px;
+    align-self: center;
+}
+
+#createItemPlaceholder{
+    margin: 10px auto;
+    width: 170px;
+    height: 170px;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+#createItemPlaceholder:hover , #createItemPlaceholder:active{
+    background-color: darkgrey;
+}
+
+#createItemPlaceholder:hover h3 , #createItemPlaceholder:active h3{
+    color: lightgray;
+}
+#createItemPlaceholder h3{
+    color: darkgrey;
+    font-size: 12em;
+    line-height: 170px;
+    margin: 0;
+    text-align: center;
+    vertical-align: center;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+#createItem p{
+    margin: 0;
+}
