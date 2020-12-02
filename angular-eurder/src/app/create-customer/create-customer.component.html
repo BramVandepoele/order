@@ -1,0 +1,55 @@
+<div class="mainContainer">
+    <div class="componentHeader">
+        <h1>Customer</h1>
+        <button (click)="goBack()">Back</button>
+    </div>
+    <div class="form">
+        <div id="nameContainer">
+            <div class="nameContainer">
+                <label for="firstName">First name</label>
+                <input id="firstName" #firstName placeholder="First name"/>
+            </div>
+            <div class="nameContainer">
+                <label for="lastName">Last name</label>
+                <input id="lastName" #lastName placeholder="Last name"/>
+            </div>
+        </div>
+        <label for="email">E-mail</label><br/>
+        <div id="emailContainer">
+            <input id="email" #email placeholder="E-mail"/><span>@</span>
+            <input id="emailDomain" #emailDomain placeholder="Domain"/>
+        </div>
+        <label for="phone">Phone number (mobile)</label><br/>
+        <div id="phoneContainer">
+            <span>+</span>
+            <input id="phone" #countryCode placeholder="00"/>
+            <input id="phoneNumber" #phoneNumber placeholder="Phone number"/>
+        </div>
+        <div id="addressContainer">
+            <div id="streetName">
+                <label for="street">Street</label>
+                <input id="street" #street placeholder="Street"/>
+            </div>
+            <div id="house-number">
+                <label for="houseNumber">Number</label>
+                <input id="houseNumber" #houseNumber placeholder="Number">
+            </div>
+            <div id="postal-code">
+                <label for="postalcode">Postalcode</label>
+                <input id="postalcode" #postalcode placeholder="Postalcode">
+            </div>
+            <div id="countryName">
+                <label for="country">Country</label>
+                <input id="country" #country placeholder="Country">
+            </div>
+        </div>
+        <div id="buttonContainer">
+            <button id="buttonSave" (click)="createCustomer(firstName.value, lastName.value, email.value, emailDomain.value, countryCode.value, phoneNumber.value, street.value, houseNumber.value, postalcode.value, country.value)">Save customer</button>
+            <button id="buttonCancel" (click)="goBack()">Cancel</button>
+        </div>
+
+        <div id="success">
+            <p>Customer created.</p>
+        </div>
+    </div>
+</div>

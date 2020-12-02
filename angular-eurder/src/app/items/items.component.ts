@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ItemService} from "../item.service";
 import {Item} from "../item";
+import {Observable, of, Subject} from "rxjs";
 
 @Component({
   selector: 'app-items',
@@ -21,7 +22,6 @@ export class ItemsComponent implements OnInit {
   onSelect(item: Item): void {
     this.selectedItem = item;
   }
-
 
   getItems(): void{
     this.itemService.getAllItems().subscribe(items => this.items = items);

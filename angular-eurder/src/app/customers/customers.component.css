@@ -1,0 +1,95 @@
+.componentHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.componentHeader input{
+    height: 30px;
+    margin-right: 25px;
+    margin-top: 10px;
+    width: 300px;
+    border-radius: 10px;
+    border-color: #0063B3;
+}
+
+.customer{
+    list-style: none;
+}
+
+.customer a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+
+}
+
+.customer a:active, .customer a:hover{
+    color: #0063B3;
+}
+
+.rowContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.rowContainer a{
+    width: 90%;
+}
+
+.rowContainer button{
+    width: 10%;
+}
+
+.customerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: lightgray;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    height: 40px;
+    width: 100%;
+}
+
+#firstElement{
+    background-color: darkgrey;
+}
+
+#firstListItem a:active, #firstListItem a:hover{
+    color: black;
+}
+
+#customerList{
+    padding-bottom: 25px;
+}
+
+.customerContainer span{
+    margin-left: 10px;
+    width: 33%;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.customer button{
+    margin-top: 0px;
+    text-align: center;
+    vertical-align: center;
+    font-size: 1.2em;
+    height: 40px;
+    border-radius: 0px 12px 12px 0px;
+}
+
+.customer button:active, .customer button:hover{
+    background-color: #0583F2;
+}
+
+#firstListItem button{
+    background-color: #34ba22;
+}
+
+#firstListItem button:active, #firstListItem button:hover{
+    background-color: #68e058;
+}

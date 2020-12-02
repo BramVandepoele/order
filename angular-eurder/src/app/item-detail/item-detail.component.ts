@@ -34,4 +34,33 @@ export class ItemDetailComponent implements OnInit {
         this.itemService.getItemById(id)
             .subscribe(item => this.item = item);
     }
+
+    updateItem(id: string, name: string, description: string, price: string, stock: string) {
+        let stockValue = Number(stock);
+        let priceValue = Number(price);
+        let updatedItem: Item = new Item(stockValue, description, id, name, priceValue, "");
+        this.itemService.updateItem(updatedItem).subscribe();
+        // @ts-ignore
+        document.getElementById("success").style.visibility = "visible";
+    }
+
+    allowUpdate(id: string, name: string, description: string, price: string, stock: string) {
+        // @ts-ignore
+        if(document.getElementById("updateButton").innerText === "Update"){
+            console.log("click");
+            // @ts-ignore
+            document.getElementById("updateButton").innerText = "Save element";
+            // @ts-ignore
+            document.getElementById("name").removeAttribute("readonly");
+            // @ts-ignore
+            document.getElementById("description").removeAttribute("readonly");
+            // @ts-ignore
+            document.getElementById("price").removeAttribute("readonly");
+            // @ts-ignore
+            document.getElementById("stock").removeAttribute("readonly");
+        }else{
+            this.updateItem(id, name, description, price, stock);
+        }
+
+    }
 }

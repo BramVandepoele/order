@@ -1,8 +1,9 @@
 <div class="mainContainer">
     <div class="componentHeader">
         <h1>Create new item</h1>
+        <button (click)="goBack()">back</button>
     </div>
-    <form>
+    <form id="createItemForm">
         <div>
             <label for="name">Name</label><br/>
             <input #name id="name" placeholder="Item name"><br/>
@@ -20,9 +21,13 @@
             <input #stock id="stock" placeholder="Amount">
         </div>
         <div id="buttonContainer">
-            <button id="buttonCreate">Create</button>
-            <button id="buttonCancel" >Cancel</button>
+            <button id="buttonCreate" (click)="createNewItem(name.value, description.value, price.value, stock.value)">Create</button>
+            <button id="buttonCancel" (click)="goBack()" >Cancel</button>
+        </div>
+        <div id="success">
+            <p>Item created.</p>
         </div>
     </form>
+
 
 </div>

@@ -10,6 +10,8 @@ form label{
     float: left;
 }
 
+
+
 #description{
     height: 200px;
 }
@@ -51,4 +53,12 @@ form label{
     width: 25%;
     float: right;
     background-color: darkgrey;
+}
+
+#success{
+    display: flex;
+    visibility: hidden;
+    width: 100%;
+    text-align: left;
+    width: 100%;
 }

@@ -5,21 +5,31 @@
     </div>
     <div class="form">
         <label for="name">Name</label>
-            <input id="name" [(ngModel)]="item.name" placeholder="Item name"/>
+        <input id="name" #name [(ngModel)]="item.name" placeholder="Item name" readonly/>
 
         <label for="description">Description</label>
-            <textarea id="description" [(ngModel)]="item.description" placeholder="Item description"></textarea>
+        <textarea id="description" #description [(ngModel)]="item.description" placeholder="Item description"
+                  readonly></textarea>
         <div class="smallInput">
-        <label for="price">Price</label>
-            <input id="price" [(ngModel)]="item.price" placeholder="Price"/>
+            <label for="price">Price</label>
+            <input id="price" #price [(ngModel)]="item.price" placeholder="Price" readonly/>
         </div>
         <div class="smallInput">
-        <label for="stock">Amount of Stock</label>
-            <input id="stock" [(ngModel)]="item.amountOfStock" placeholder="Amount"/>
+            <label for="stock">Amount of Stock</label>
+            <input id="stock" #stock [(ngModel)]="item.amountOfStock" placeholder="Amount" readonly/>
         </div>
         <div id="buttonContainer">
-        <button id="buttonSave">Save</button>
-        <button id="buttonCancel">Cancel</button>
+            <button class="buttonSave" id="updateButton"
+                    (click)="allowUpdate(item.id, name.value, description.value, price.value, stock.value)">Update
+            </button>
+<!--            <button class="buttonSave"-->
+<!--                    (click)="updateItem(item.id, name.value, description.value, price.value, stock.value)">Update-->
+<!--            </button>-->
+            <button id="buttonCancel" (click)="goBack()">Cancel</button>
+        </div>
+
+        <div id="success">
+            <p>Item updated.</p>
         </div>
     </div>
 

@@ -1,0 +1,48 @@
+<div *ngIf="customer" class="mainContainer">
+    <div class="componentHeader">
+        <h1>Customer <span id="id">{{customer.id}}</span></h1>
+        <button (click)="goBack()">Back</button>
+    </div>
+    <div class="form">
+        <div id="nameContainer">
+            <div class="nameContainer">
+                <label for="firstName">First name</label>
+                <input id="firstName" #firstName [(ngModel)]="customer.firstname" placeholder="First name" readonly/>
+            </div>
+            <div class="nameContainer">
+                <label for="lastName">Last name</label>
+                <input id="lastName" #lastName [(ngModel)]="customer.lastname" placeholder="Last name" readonly/>
+            </div>
+        </div>
+        <label for="email">E-mail</label><br/>
+        <div id="emailContainer">
+            <input id="email" #email [(ngModel)]="customer.email.localPart" placeholder="E-mail" readonly/><span>@</span>
+            <input id="emailDomain" #emailDomain [(ngModel)]="customer.email.domain" placeholder="Domain" readonly/>
+        </div>
+        <label for="phone">Phone number (mobile)</label><br/>
+        <div id="phoneContainer">
+            <span>+</span>
+            <input id="phone" #countryCode [(ngModel)]="customer.phoneNumber.countryCallingCode" placeholder="00" readonly>
+            <input id="phoneNumber" #phoneNumber [(ngModel)]="customer.phoneNumber.number" placeholder="Phone number" readonly/>
+        </div>
+        <div id="addressContainer">
+            <div id="streetName">
+                <label for="street">Street</label>
+                <input id="street" #street [(ngModel)]="customer.address.streetName" placeholder="Street" readonly/>
+            </div>
+            <div id="house-number">
+                <label for="houseNumber">Number</label>
+                <input id="houseNumber" #houseNumber [(ngModel)]="customer.address.houseNumber" placeholder="Number" readonly/>
+            </div>
+            <div id="postal-code">
+                <label for="postalcode">Postalcode</label>
+                <input id="postalcode" #postalcode [(ngModel)]="customer.address.postalCode" placeholder="Postalcode" readonly/>
+            </div>
+            <div id="countryName">
+                <label for="country">Country</label>
+                <input id="country" #country [(ngModel)]="customer.address.country" placeholder="Country" readonly/>
+            </div>
+        </div>
+
+    </div>
+</div>

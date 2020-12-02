@@ -1,0 +1,32 @@
+<div class="mainContainer">
+    <div class="componentHeader">
+        <h1>Customers</h1>
+        <input placeholder="search...">
+    </div>
+    <ul id="customerList">
+        <li class = customer id="firstListItem">
+            <div class="rowContainer">
+            <a>
+            <div class = "customerContainer"  id="firstElement">
+                <span>ID</span>
+                <span>First name</span>
+                <span>Last name</span>
+            </div>
+            </a>
+            <button routerLink="/create-customer">add</button>
+            </div>
+        </li>
+        <li class="customer" *ngFor="let customer of customers">
+            <div class="rowContainer">
+            <a routerLink="/customer-detail/{{customer.id}}">
+            <div class="customerContainer">
+                <span>{{customer.id}}</span>
+               <span> {{customer.firstname}}</span>
+                <span>{{customer.lastname}}</span>
+            </div>
+            </a>
+            <button routerLink="/customer-edit/{{customer.id}}">edit</button>
+            </div>
+        </li>
+    </ul>
+</div>

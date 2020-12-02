@@ -7,7 +7,10 @@ header{
     width: 100%;
     width: 100%;
     background-color: white;
+    position: fixed;
+    top: 0px;
 }
+
 header img{
 }
 header nav{
@@ -45,4 +48,19 @@ header li a{
 
 header li a:hover, header li a:active{
     background-color: #0583F2;
+}
+
+footer{
+    margin-top: 30px;
+    height: 50px;
+    color: white;
+    background-color: #0063B3;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    vertical-align: center;
 }

@@ -10,6 +10,7 @@
 .form input, .form textarea{
     width: 100%;
     margin-bottom: 20px;
+    height: 20px;
 }
 .form label {
     float: left;
@@ -33,7 +34,7 @@
     width: 100%;
 }
 
-.buttonSave{
+#buttonSave{
     width: 70%;
     background-color: #0063B3;
     height: 40px;
@@ -41,7 +42,7 @@
     margin-bottom: 25px;
 }
 
-.buttonSave:hover, .buttonSave:active{
+#buttonSave:hover, #buttonSave:active{
     background-color: #0583F2;
 }
 
@@ -54,4 +55,60 @@
     background-color: darkgrey;
     height: 40px;
     border-radius: 12px;
+}
+#emailContainer{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#email{
+    width: 50%;
+}
+#emailDomain{
+    width: 45%;
+}
+
+#nameContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameContainer{
+    width: 50%;
+}
+
+#phoneContainer{
+    display: flex;
+}
+#phone{
+    width: 5%;
+}
+#phoneNumber{
+    width: 95%;
+}
+
+#addressContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#streetName{
+    width: 80%;
+}
+
+#house-number{
+    width: 20%;
+}
+
+#house-number input{
+    width: 100%;
+}
+
+#postal-code{
+    width: 30%;
+}
+
+#countryName{
+    width: 70%;
 }
