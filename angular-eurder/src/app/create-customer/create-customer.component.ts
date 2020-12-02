@@ -34,5 +34,31 @@ export class CreateCustomerComponent implements OnInit {
     this.customerService.addCustomer(newCustomer).subscribe();
     // @ts-ignore
     document.getElementById("success").style.visibility="visible";
+
+    this.resetForm();
+  }
+
+  private resetForm() {
+    // @ts-ignore
+    document.getElementById("firstName").value='';
+    // @ts-ignore
+    document.getElementById("lastName").value='';
+    // @ts-ignore
+    document.getElementById("email").value='';
+    // @ts-ignore
+    document.getElementById("emailDomain").value='';
+    // @ts-ignore
+    document.getElementById("phone").value='';
+    // @ts-ignore
+    document.getElementById("street").value='';
+    // @ts-ignore
+    document.getElementById("houseNumber").value='';
+    // @ts-ignore
+    document.getElementById("country").value='';
+    // @ts-ignore
+    document.getElementById("phoneNumber").value='';
+    // @ts-ignore
+    document.getElementById("postalcode").value='';
+
   }
 }
